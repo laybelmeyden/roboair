@@ -1,13 +1,13 @@
-    <script type="text/javascript" src="assets/js/jquery.js"></script>
-    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="assets/js/lightbox.min.js"></script>
-    <script type="text/javascript" src="assets/js/wow.min.js"></script>
-    <script type="text/javascript" src="assets/js/main.js"></script>  
-    <script src="assets/js/modernizr.custom.js"></script>
-    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
-	<script src="assets/js/masonry.pkgd.min.js"></script>
-	<script src="assets/js/classie.js"></script>
-	<script src="assets/js/cbpGridGallery.js"></script>
-			<script>
-			new CBPGridGallery( document.getElementById( 'grid-gallery' ) );
-		</script>
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="assets/js/jquery-min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/wow.js"></script>
+    <script src="assets/js/jquery.nav.js"></script>
+    <script src="assets/js/scrolling-nav.js"></script>
+    <script src="assets/js/jquery.easing.min.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>  
+    <script src="assets/js/waypoints.min.js"></script>   
+    <script src="assets/js/jquery.slicknav.js"></script>
+    <script src="assets/js/main.js"></script>

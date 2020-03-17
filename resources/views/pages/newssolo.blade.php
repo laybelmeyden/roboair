@@ -1,36 +1,28 @@
 @extends('layouts.master')
 @section('content')
-<section id="page-breadcrumb">
-        <div class="vertical-center sun">
-             <div class="container">
-                <div class="row">
-                    <div class="action">
-                        <div class="col-sm-12">
-                            <h1 class="title">{{$solo->title}}</h1>
-                        </div>                                                                                
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--/#page-breadcrumb-->
+<section class="page-header">
+<div class="container">
+<div class="row justify-content-md-center">
+<div class="col-md-12">
+<div class="breadcrumb-wrapper text-center">
+<h2>{{$solo->title}}</h2>
+<p><a href="/">Главная </a>/ {{$solo->title}}</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="container">
+    <div class="row">
+    <div class="col-lg-12 col-md-12 col-xs-12">
+<div class="blog-comment">
+<img src="storage/{{$solo->img}}" class="solo_news_img" alt="">
+<h4>{{$solo->title}}</h4>
+<p>{{$solo->data}}<br><br>{!! $solo->body !!}</p>
+<p>{!! $solo->dopfunk !!}</p>
 
-    <section class="solo_news_sec">
-        <div class="container">
-            <div class="row">
-                         <div class="col-md-12 col-sm-12">
-                            <div class="single-blog blog-details two-column">
-                                <div class="post-thumb text-center">
-                                    <img src="storage/{{$solo->img}}" class="solo_news_img" alt="">
-                                </div>
-                                <div class="post-content overflow">
-                                    <h3 class="post-author">{{$solo->data}}</h3>
-                                    <p>{!! $solo->body !!}</p>
-                                </div>
-                            </div>
-                        </div>
-            </div>
-        </div>
-    </section>
-    <!--/#blog-->
+</div>
+</div>
+    </div>
+</div>
 @endsection

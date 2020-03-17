@@ -1,105 +1,231 @@
 @extends('layouts.master')
 
 @section('content')
-<section id="home-slider">
+      <!-- Hero Area Start -->
+      <div id="hero-area" class="hero-area-bg">
         <div class="container">
-            <div class="row">
-                <div class="main-slider">
-                    <div class="slide-text">
-                        <h1>ROBOSTART</h1>
-                        <p>Ресурсный центр развития технических видов спорта и робототехники</p>
-                        <a href="/about" class="btn btn-common">О Нас</a>
-                    </div>
-                    <img src="assets/images/freg1.png" class="slider-house" alt="slider image">
-                    <img src="assets/images/freg2.png" class="slider-sun" alt="slider image">
-                    <img src="assets/images/freg3.png" class="slider-birds2" alt="slider image">
-                </div>
+          <div class="row">
+            <div class="col-md-12 col-sm-12">
+              <div class="contents text-center">
+                <h2 class="head-title wow fadeInUp">Сибирский робостарт</h2>
+                <!-- <div class="header-button wow fadeInUp" data-wow-delay="0.3s">
+                  <a href="#services" class="btn btn-common">Explore</a>
+                </div> -->
+              </div>
+              <div class="img-thumb text-center wow fadeInUp" data-wow-delay="0.6s">
+                <img class="img-fluid" src="assets/img/123123.png" alt="">
+              </div>
             </div>
+          </div>
         </div>
-    </section>
-    <!--/#home-slider-->
-<section id="blog" class="padding-top">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="row">
-            @foreach ($nnews as $nnew)
-						<div class="col-md-4 blog-padding-right">
-						    <a href="/news{{ $nnew->id }}">
-                            <div class="single-blog two-column">
-                                <div class="post-thumb">
-                                    <img src="storage/{{ $nnew->img }}" class="img-responsive img_news text-center" alt="">
-                                    <div class="post-overlay">
-                                        <span class="uppercase"><p class="news_data">{{ $nnew->data}}</p></span>
-                                    </div>
-                                </div>
-                                <div class="post-content overflow">
-                                    <h2 class="post-title bold">{{ $nnew->title}}</h2>
-                                    <p class="news_pretitle">{{ $nnew->pretitle }}</p>
-                                    <p>Подробнее</p>
-                                </div>
-                            </div>
-                            </a>
-                        </div>
-            @endforeach
-                    </div>
-                 </div>
-                </div>
+      </div>
+      <!-- Hero Area End -->
+  <!-- Feature Section Start -->
+  <div id="feature">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-6 col-md-12 col-sm-12">
+            <div class="text-wrapper">
+              <div>
+                <h2 class="title-hl wow fadeInLeft" data-wow-delay="0.3s">Наши цели:</h2>
+                <!-- <p class="mb-4">A digital studio specialising in User Experience & eCommerce, we combine innovation with digital craftsmanship to help brands fulfill their potential.</p> -->
+                <!-- <a href="#" class="btn btn-common">More About Us</a> -->
+              </div>
             </div>
+          </div>
+          <div class="col-lg-6 col-md-12 col-sm-12 padding-none feature-bg">
+            <div class="feature-thumb">
+              <div class="feature-item wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+                <div class="icon">
+                  <i class="lni-microphone"></i>
+                </div>
+                <div class="feature-content">
+                  <h3>Цель №1:</h3>
+                  <p>Популяризация и вовлечение детей и молодежи в сферу робототехники и IT</p>
+                </div>
+              </div>
+              <div class="feature-item wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="500ms">
+                <div class="icon">
+                  <i class="lni-users"></i>
+                </div>
+                <div class="feature-content">
+                  <h3>Цель №2:</h3>
+                  <p>Профориентация старшеклассников и молодежи в малых городах Омской области</p>
+                </div>
+              </div>
+              <div class="feature-item wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="700ms">
+                <div class="icon">
+                  <i class="lni-medall-alt"></i>
+                </div>
+                <div class="feature-content">
+                  <h3>Цель №3:</h3>
+                  <p>Развитие системы дополнительного образования детей и молодежи по направлению "робототехника"</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+    <!-- Feature Section End -->
 
-    <section id="action" class="responsive">
-        <div class="vertical-center">
-             <div class="container">
-                <div class="row">
-                    <div class="action take-tour">
-                        <div class="col-sm-7 wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
-                            <h1 class="title">Есть вопросы или предложения ?</h1>
-                            <p>Напишите нам и мы обызательно с Вами свяжемся!</p>
-                        </div>
-                        <div class="col-sm-5 text-center wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
-                            <div class="tour-button">
-                                <a href="http://rusinnovations.com/#footer" target="blank" class="btn btn-common">Написать</a>
-                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <!-- Services Section Start -->
+    <section id="services" class="section-padding bg-gray">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 class="section-title wow fadeInDown" data-wow-delay="0.3s">Площадки проведения</h2>
+          <!-- <p>A desire to help and empower others between community contributors in technology <br> began to grow in 2020.</p> -->
         </div>
-   </section>
-    <!--/#action-->
-
-   <section id="team">
-        <div class="container">
-            <div class="row">
-                <h1 class="title text-center wow fadeInDown" data-wow-duration="500ms" data-wow-delay="300ms">Meropriyatie</h1>
-                    <!-- Wrapper for slides -->
-                    <div class="carousel-inner">
-                        <div class="item active">
-                            @foreach ( $meros as $mero)
-                            <div class="col-md-4">
-                                <a href="/meropriyatiya{{ $mero->id }}">
-								<div class="team-single-wrapper">
-                                    <div class="team-single">
-                                        <div class="person-thumb">
-                                            <img src="storage/{{ $mero->img }}" class="img-responsive img_mero" alt="">
-                                        </div>
-                                        <div class="social-profile">
-                                        </div>
-                                    </div>
-                                    <div class="person-info">
-                                        <p>{{ $mero->data }}</p>
-                                        <h2>{{ $mero->title }}</h2>
-                                    </div>
-                                </div>
-								</a>
-                            </div>
-                            @endforeach
-                        </div>
-                        
-                    </div>
+        <div class="row">
+          <!-- Services item -->
+          <div class="col-md-6 col-lg-4 col-xs-12">
+            <div class="services-item wow fadeInRight" data-wow-delay="0.3s">
+              <!-- <div class="icon">
+                <i class="lni-pencil"></i>
+              </div> -->
+              <div class="services-content">
+                <h3><a>Исилькуль</a></h3>
+                <p>МБОУ «Исилькульский лицей» <br>28 Апреля</p>
+              </div>
             </div>
+          </div>
+          <!-- Services item -->
+          <div class="col-md-6 col-lg-4 col-xs-12">
+            <div class="services-item wow fadeInRight" data-wow-delay="0.6s">
+              <div class="services-content">
+                <h3><a>Калачинск</a></h3>
+                <p>БОУ г. Калачинска Омской области «Лицей» 29 Апреля</p>
+              </div>
+            </div>
+          </div>
+          <!-- Services item -->
+          <div class="col-md-6 col-lg-4 col-xs-12">
+            <div class="services-item wow fadeInRight" data-wow-delay="0.9s">
+              <div class="services-content">
+                <h3><a>Тара</a></h3>
+                <p>БОУ «Тарская СОШ №5» <br>30 Апреля</p>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
+    <!-- Services Section End -->
+
+
+ 
+    
+
+    <!-- Blog Section -->
+    <section id="blog" class="section-padding">
+      <!-- Container Starts -->
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 class="section-title wow fadeInDown" data-wow-delay="0.3s">Последние новости</h2>
+        </div>
+        <div class="row">
+        @foreach ($nnews as $nnew)
+          <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 blog-item">
+            <!-- Blog Item Starts -->
+            <div class="blog-item-wrapper wow fadeInLeft" data-wow-delay="0.3s">
+              <div class="blog-item-img">
+                <a href="single-post.html">
+                  <img src="storage/{{ $nnew->img }}" alt="" class="img-responsive">
+                </a>                
+              </div>
+              <div class="blog-item-text"> 
+                <h3 class="news_h3">
+                <a href="/news{{ $nnew->id }}">{{ $nnew->title}}</a>
+                </h3>
+                <p class="news_p">
+                {{ $nnew->data}}
+                {{ $nnew->pretitle }} 
+                </p>
+                <a href="/news{{ $nnew->id }}" class="btn btn-common btn-rm">читать</a>
+              </div>
+            </div>
+            <!-- Blog Item Wrapper Ends-->
+          </div>
+          @endforeach
+        </div>
+      </div>
+    </section>
+    <div id="mero">
+    <section id="blog" class="section-padding">
+      <!-- Container Starts -->
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 class="section-title wow fadeInDown" data-wow-delay="0.3s">Мероприятия</h2>
+        </div>
+        <div class="row">
+        @foreach ($meros as $mero)
+          <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 blog-item">
+            <!-- Blog Item Starts -->
+            <div class="blog-item-wrapper wow fadeInLeft" data-wow-delay="0.3s">
+              <div class="blog-item-img">
+                <a href="single-post.html">
+                  <img src="storage/{{ $mero->img }}" alt="" class="img-responsive">
+                </a>                
+              </div>
+              <div class="blog-item-text"> 
+                <h3 class="news_h3">
+                <a href="/meropriyatiya{{ $mero->id }}">{{ $nnew->title}}</a>
+                </h3>
+                <p class="news_p">
+                {{ $mero->data }}
+                {{ $mero->title }}
+                </p>
+                <a href="/meropriyatiya{{ $mero->id }}" class="btn btn-common btn-rm">читать</a>
+              </div>
+            </div>
+            <!-- Blog Item Wrapper Ends-->
+          </div>
+          @endforeach
+        </div>
+      </div>
+    </section>
+    </div>
+    <!-- blog Section End -->
+
+    <!-- Clients Section Start -->
+    <div id="clients" class="section-padding bg-gray">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 class="section-title wow fadeInDown" data-wow-delay="0.3s">партнеры</h2>
+        </div>
+        <div class="row text-align-">
+          <div class="col-lg-3 col-md-3 col-xs-12 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="client-item-wrapper">
+              <img class="img-fluid" src="assets/img/003.jpg" alt="">
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-3 col-xs-12 wow fadeInUp" data-wow-delay="0.6s">
+            <div class="client-item-wrapper">
+              <img class="img-fluid" src="assets/img/ba8a2c0ac06c.jpg" alt="">
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-3 col-xs-12 wow fadeInUp" data-wow-delay="0.9s">
+            <div class="client-item-wrapper">
+              <img class="img-fluid" src="assets/img/logo_120905.jpg" alt="">
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-3 col-xs-12 wow fadeInUp" data-wow-delay="1.2s">
+            <div class="client-item-wrapper">
+              <img class="img-fluid"  src="assets/img/xLogo.png.pagespeed.ic.OMzdoh2sWs.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Clients Section End -->
+
+    <!-- Go to Top Link -->
+    <a href="#" class="back-to-top">
+    	<i class="lni-arrow-up"></i>
+    </a>
+    
+    <!-- Preloader -->
+    <div id="preloader">
+      <div class="loader" id="loader-1"></div>
+    </div>
 @endsection

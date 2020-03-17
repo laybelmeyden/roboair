@@ -1,114 +1,126 @@
-jQuery(function($) {'use strict';
+(function($) {
+  
+  "use strict";  
 
-	//Responsive Nav
-	$('li.dropdown').find('.fa-angle-down').each(function(){
-		$(this).on('click', function(){
-			if( $(window).width() < 768 ) {
-				$(this).parent().next().slideToggle();
-			}
-			return false;
-		});
-	});
-
-	//Fit Vids
-	if( $('#video-container').length ) {
-		$("#video-container").fitVids();
-	}
-
-	//Initiat WOW JS
-	new WOW().init();
-
-	// portfolio filter
-	$(window).load(function(){
-
-		$('.main-slider').addClass('animate-in');
-		$('.preloader').remove();
-		//End Preloader
-
-		if( $('.masonery_area').length ) {
-			$('.masonery_area').masonry();//Masonry
-		}
-
-		var $portfolio_selectors = $('.portfolio-filter >li>a');
-		
-		if($portfolio_selectors.length) {
-			
-			var $portfolio = $('.portfolio-items');
-			$portfolio.isotope({
-				itemSelector : '.portfolio-item',
-				layoutMode : 'fitRows'
-			});
-			
-			$portfolio_selectors.on('click', function(){
-				$portfolio_selectors.removeClass('active');
-				$(this).addClass('active');
-				var selector = $(this).attr('data-filter');
-				$portfolio.isotope({ filter: selector });
-				return false;
-			});
-		}
-
-	});
+  $(window).on('load', function() {
 
 
-	$('.timer').each(count);
-	function count(options) {
-		var $this = $(this);
-		options = $.extend({}, options || {}, $this.data('countToOptions') || {});
-		$this.countTo(options);
-	}
-		
-	// Search
-	$('.fa-search').on('click', function() {
-		$('.field-toggle').fadeToggle(200);
-	});
 
-	// Contact form
-	var form = $('#main-contact-form');
-	form.submit(function(event){
-		event.preventDefault();
-		var form_status = $('<div class="form_status"></div>');
-		$.ajax({
-			url: $(this).attr('action'),
-			beforeSend: function(){
-				form.prepend( form_status.html('<p><i class="fa fa-spinner fa-spin"></i> Email is sending...</p>').fadeIn() );
-			}
-		}).done(function(data){
-			form_status.html('<p class="text-success">Thank you for contact us. As early as possible  we will contact you</p>').delay(3000).fadeOut();
-		});
-	});
+  /*Page Loader active
+  ========================================================*/
+  $('#preloader').fadeOut();
 
-	// Progress Bar
-	$.each($('div.progress-bar'),function(){
-		$(this).css('width', $(this).attr('data-transition')+'%');
-	});
+  // Sticky Nav
+    $(window).on('scroll', function() {
+        if ($(window).scrollTop() > 100) {
+            $('.scrolling-navbar').addClass('top-nav-collapse');
+        } else {
+            $('.scrolling-navbar').removeClass('top-nav-collapse');
+        }
+    });
 
-	if( $('#gmap').length ) {
-		var map;
+    /* Auto Close Responsive Navbar on Click
+    ========================================================*/
+    function close_toggle() {
+        if ($(window).width() <= 768) {
+            $('.navbar-collapse a').on('click', function () {
+                $('.navbar-collapse').collapse('hide');
+            });
+        }
+        else {
+            $('.navbar .navbar-inverse a').off('click');
+        }
+    }
+    close_toggle();
+    $(window).resize(close_toggle);
 
-		map = new GMaps({
-			el: '#gmap',
-			lat: 43.04446,
-			lng: -76.130791,
-			scrollwheel:false,
-			zoom: 16,
-			zoomControl : false,
-			panControl : false,
-			streetViewControl : false,
-			mapTypeControl: false,
-			overviewMapControl: false,
-			clickable: false
-		});
+    // one page navigation 
+    $('.navbar-nav').onePageNav({
+      currentClass: 'active'
+    });
 
-		map.addMarker({
-			lat: 43.04446,
-			lng: -76.130791,
-			animation: google.maps.Animation.DROP,
-			verticalAlign: 'bottom',
-			horizontalAlign: 'center',
-			backgroundColor: '#3e8bff',
-		});
-	}
+    /* slicknav mobile menu active  */
+    $('.mobile-menu').slicknav({
+        prependTo: '.navbar-header',
+        parentTag: 'liner',
+        allowParentLinks: true,
+        duplicate: true,
+        label: '',
+        closedSymbol: '<i class="lni-chevron-right"></i>',
+        openedSymbol: '<i class="lni-chevron-down"></i>',
+      });
 
-});
+      /* WOW Scroll Spy
+    ========================================================*/
+     var wow = new WOW({
+      //disabled for mobile
+        mobile: false
+    });
 
+    wow.init();
+
+    /* 
+    CounterUp
+    ========================================================================== */
+    $('.counter').counterUp({
+      time: 1000
+    });  
+    
+    /* Testimonials Carousel 
+    ========================================================*/
+    var owl = $("#testimonials");
+      owl.owlCarousel({
+        loop: true,
+        nav: false,
+        dots: true,
+        center: true,
+        margin: 15,
+        slideSpeed: 1000,
+        stopOnHover: true,
+        autoPlay: true,
+        responsiveClass: true,
+        responsiveRefreshRate: true,
+        responsive : {
+            0 : {
+                items: 1
+            },
+            768 : {
+                items: 1
+            },
+            960 : {
+                items: 1
+            },
+            1200 : {
+                items: 1
+            },
+            1920 : {
+                items: 1
+            }
+        }
+      });  
+
+
+
+    /* Back Top Link active
+    ========================================================*/
+      var offset = 200;
+      var duration = 500;
+      $(window).scroll(function() {
+        if ($(this).scrollTop() > offset) {
+          $('.back-to-top').fadeIn(400);
+        } else {
+          $('.back-to-top').fadeOut(400);
+        }
+      });
+
+      $('.back-to-top').on('click',function(event) {
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: 0
+        }, 600);
+        return false;
+      });
+
+  });      
+
+}(jQuery));

@@ -79,4 +79,21 @@ class MainController extends Controller
       
         return view('pages.photosolo', compact('solo', 'titl', 'meta', 'img', 'keywords'));
     }
+    public function contact_f(Request $request)
+    {
+  $to_name = "AIR";
+  $to_email = "info@rusinnovations.com";
+  $data = array(
+      'email_footer' => request('email_footer'),
+      'name_footer' => request('name_footer'),
+      'textarea_footer' => request('textarea_footer'),
+  );
+    Mail::send('email.mailcontact', $data, function($message) use ($data, $to_email, $to_name)
+    {
+      $message->from($to_email, $data['email_footer'],$data['name_footer'], $data['textarea_footer']);
+      $message->to($to_email)->subject('Сообщение с сайта');
+   });
+
+   return redirect('/');
+  }
 }

@@ -1,33 +1,101 @@
-<footer id="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3"></div>
-                <div class="col-md-3 text-left">
-                  <div class="contact-info bottom">
-                     <h2>Адрес</h2>
-                        <address>
-                            105187, г. Москва,<br> 
-                            ул. Щербаковская, <br> 
-                            53 корпус «В» оф. 504 на базе<br> 
-                            НПО «Сапфир»<br> 
-                        </address>
+<footer>
+
+    <!-- Contact Section Start -->
+    <section id="contact" class="section-padding">    
+      <div class="container">
+        <div class="row contact-form-area wow fadeInUp" data-wow-delay="0.4s">          
+          <div class="col-md-6 col-lg-6 col-sm-12">
+            <div class="contact-block">
+              <form id="contactForm" method="POST" action="/contact_f">
+              {{ csrf_field() }}
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <input type="text" class="form-control" id="name" name="name_footer" placeholder="Ваше имя" required data-error="введите ваше имя">
+                      <div class="help-block with-errors"></div>
+                    </div>                                 
                   </div>
-                </div>
-                <div class="col-md-4 text-right">
-                    <div class="contact-info bottom">
-                        <h2>Контакты</h2>
-                        <address>
-                        E-mail: <a href="mailto:info@rusinnovations.com"> info@rusinnovations.com</a> <br> 
-                        Телефон: +7 (499) 753-01-25  <br> 
-                        </address>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <input type="text" placeholder="Ваша почта" id="email" class="form-control" name="email_footer" required data-error="введите вашу почту">
+                      <div class="help-block with-errors"></div>
+                    </div> 
+                  </div>
+                   <!-- <div class="col-md-12">
+                    <div class="form-group">
+                      <input type="text" placeholder="Subject" id="msg_subject" class="form-control" required data-error="Please enter your subject">
+                      <div class="help-block with-errors"></div>
                     </div>
-                </div>
-                <div class="col-md-2"></div>
-                <div class="col-sm-12">
-                    <div class="copyright-text text-center">
-                        <p>&copy; AIR Creative Group</p>
+                  </div> -->
+                  <div class="col-md-12">
+                    <div class="form-group"> 
+                      <textarea class="form-control" id="message" placeholder="Ваше сообщение" name="textarea_footer" rows="5" data-error="Введите сообщение" required></textarea>
+                      <div class="help-block with-errors"></div>
                     </div>
-                </div>
+                    <div class="submit-button">
+                      <button class="btn btn-common" id="form-submit" type="submit">Отправить</button>
+                    </div>
+                  </div>
+                </div>            
+              </form>
             </div>
+          </div>
+          <div class="col-md-6 col-lg-6 col-sm-12">
+            <div class="contact-right-area wow fadeIn">
+              <!-- <div class="contact-title">
+                <h1>We're a friendly bunch..</h1>
+                <p>We create projects for companies and startups with a passion for quality</p>
+              </div> -->
+              <h2>Контакты</h2>
+              <div class="contact-right">
+                <div class="single-contact">
+                  <div class="contact-icon">
+                    <i class="lni-map-marker"></i>
+                  </div>
+                  <p>г. Омск ул. Маршала Жукова, д 72, корп 1</p>
+                </div>
+                <div class="single-contact">
+                  <div class="contact-icon">
+                    <i class="lni-envelope"></i>
+                  </div>
+                  <p><a href="#">ns@anoasi.com</a></p>
+                </div>
+                <div class="single-contact">
+                  <div class="contact-icon">
+                    <i class="lni-phone-handset"></i>
+                  </div>
+                  <p><a href="#">8915310344</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </footer>
+      </div> 
+    </section>
+    <!-- Contact Section End -->
+    
+    <!-- Copyright Section Start -->
+    <div class="copyright">
+      <div class="container">
+        <div class="row">
+          <!-- <div class="col-lg-4 col-md-3 col-xs-12">
+            <div class="footer-logo">
+              <img src="assets/img/logo.png" alt="">
+            </div>
+          </div> -->
+          <!-- <div class="col-lg-4 col-md-4 col-xs-12">     
+            <div class="social-icon text-center">
+              <a class="facebook" href="#"><i class="lni-facebook-filled"></i></a>
+              <a class="twitter" href="#"><i class="lni-twitter-filled"></i></a>
+              <a class="instagram" href="#"><i class="lni-instagram-filled"></i></a>
+              <a class="linkedin" href="#"><i class="lni-linkedin-filled"></i></a>
+            </div>
+          </div> -->
+          <div class="col-lg-12 col-md-12 col-xs-12">
+            <p class="float-center">ASI Creative Croup <br>*сайт сделан за счет средств Фонда президентских грантов</p>
+          </div> 
+        </div>
+      </div>
+    </div>
+    <!-- Copyright Section End -->
+</footer>
