@@ -129,7 +129,7 @@
             <!-- Blog Item Starts -->
             <div class="blog-item-wrapper wow fadeInLeft" data-wow-delay="0.3s">
               <div class="blog-item-img">
-                <a href="single-post.html">
+                <a href="/news{{ $nnew->id }}">
                   <img src="storage/{{ $nnew->img }}" alt="" class="img-responsive">
                 </a>                
               </div>
@@ -163,7 +163,7 @@
             <!-- Blog Item Starts -->
             <div class="blog-item-wrapper wow fadeInLeft" data-wow-delay="0.3s">
               <div class="blog-item-img">
-                <a href="single-post.html">
+                <a href="/meropriyatiya{{ $mero->id }}">
                   <img src="storage/{{ $mero->img }}" alt="" class="img-responsive">
                 </a>                
               </div>
