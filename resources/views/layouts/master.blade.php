@@ -15,7 +15,7 @@
   <meta property="og:type" content="article" />
   <meta property="og:title" content="{{ $titl or 'Сибирский робостарт' }}" />
   <meta property="og:description" content="{{ $meta or 'Сибирский робостарт' }}" />
-  <meta property="og:image" href="storage/{{ $img or 'pages/air_fav.png' }}" content="storage/{{ $img or 'pages/Logo1.png' }}"  />
+  <meta property="og:image" href="storage/{{ $img or 'assets/img/Logo1.png' }}" content="storage/{{ $img or 'assets/img/Logo1.png' }}"  />
   <meta property="og:url" content="ccskm" />
   <meta property="og:site_name" content="Сибирский робостарт" />
 
