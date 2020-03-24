@@ -43,12 +43,14 @@ style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,
                         text-align: center;"
                         >
                         <br><br> 
+                        @if({{$name_1}} !== "null")
                         Почта - {{$name_1}}
                         <br>
                         Имя - {{$name_2}}
                         <br>
                         Сообщение - {{$name_3}}
                         <br>
+                        @endif
                         Имя участника - {{$name_4}}
                         <br>
                         Фамилия участника - {{$name_5}}
