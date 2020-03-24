@@ -82,6 +82,7 @@ class MainController extends Controller
     public function contact_f(Request $request)
     {
   $data = array(
+    'email' => request('email'),
       'name_1' => request('name_1'),
       'name_2' => request('name_2'),
       'name_3' => request('name_3'),
@@ -94,7 +95,7 @@ class MainController extends Controller
   \Mail::send('email.mailcontact', $data, function($message1) use ($data)
   {
       $mail_admin = env('MAIL_ADMIN_EVENTSOLO');
-      $message1->from($data['name_1'], $data['name_2'], $data['name_3'], $data['name_4'], $data['name_5'], $data['name_6'], $data['name_7'], $data['name_8']);
+      $message1->from($data['email'],$data['name_1'], $data['name_2'], $data['name_3'], $data['name_4'], $data['name_5'], $data['name_6'], $data['name_7'], $data['name_8']);
       $message1->to($mail_admin, 'For Admin')->subject('Message from site');
    });
 

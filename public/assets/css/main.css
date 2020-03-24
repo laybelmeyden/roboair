@@ -656,6 +656,10 @@ hr {
     align-items: center;
 }
 
+.hidden {
+    display: none;
+}
+
 .alert_toast {
     background-color: #fff;
     border: 1px solid #ccc;
