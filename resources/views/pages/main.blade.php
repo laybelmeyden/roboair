@@ -115,7 +115,7 @@
     <form method="POST" action="/contact_f">
       <div class="row">
         {{ csrf_field() }}
-        <input type="email" class="form-control hidden" id="name" name="email" value="test@test.ru">
+        <input type="email" class="form-control hidden" id="name" name="email" value="ns@rusinnovations.com">
         <div class="col-md-6">
           <div class="form-group">
             <input type="text" placeholder="Ваше имя" id="name_4" class="form-control" name="name_4" required data-error="введите ваше имя">

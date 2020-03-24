@@ -8,7 +8,7 @@
             <div class="contact-block">
               <form id="contactForm" method="POST" action="/contact_f">
               {{ csrf_field() }}
-              <input type="email" class="form-control hidden" id="name" name="email" value="test@test.ru">
+              <input type="email" class="form-control hidden" id="name" name="email" value="ns@rusinnovations.com">
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-group">
