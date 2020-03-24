@@ -19,7 +19,7 @@ Route::get('/about', 'MainController@about');
 Route::get('/news{solo}', 'MainController@newssolo');
 Route::get('/meropriyatiya{solo}', 'MainController@meropriyatiyasolo');
 Route::get('/photo{solo}', 'MainController@photosolo');
-
+Route::post('/contact_f', 'MainController@contact_f');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

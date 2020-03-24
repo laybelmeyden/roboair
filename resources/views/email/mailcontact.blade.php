@@ -43,11 +43,21 @@ style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,
                         text-align: center;"
                         >
                         <br><br> 
-                        Почта - {{$email_footer}}
+                        Почта - {{$name_1}}
                         <br>
-                        Имя - {{$name_footer}}
+                        Имя - {{$name_2}}
                         <br>
-                        Сообщение - {{$textarea_footer}}
+                        Сообщение - {{$name_3}}
+                        <br>
+                        Имя участника - {{$name_4}}
+                        <br>
+                        Фамилия участника - {{$name_5}}
+                        <br>
+                        Возраст участника - {{$name_6}}
+                        <br>
+                        Город учатника - {{$name_7}}
+                        <br>
+                        Место учебы участника - {{$name_8}}
                         <br>
                         </p>
                         <hr>

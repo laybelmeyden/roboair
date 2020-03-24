@@ -81,19 +81,24 @@ class MainController extends Controller
     }
     public function contact_f(Request $request)
     {
-  $to_name = "AIR";
-  $to_email = "info@rusinnovations.com";
   $data = array(
-      'email_footer' => request('email_footer'),
-      'name_footer' => request('name_footer'),
-      'textarea_footer' => request('textarea_footer'),
+      'name_1' => request('name_1'),
+      'name_2' => request('name_2'),
+      'name_3' => request('name_3'),
+      'name_4' => request('name_4'),
+      'name_5' => request('name_5'),
+      'name_6' => request('name_6'),
+      'name_7' => request('name_7'),
+      'name_8' => request('name_8'),
   );
-    Mail::send('email.mailcontact', $data, function($message) use ($data, $to_email, $to_name)
-    {
-      $message->from($to_email, $data['email_footer'],$data['name_footer'], $data['textarea_footer']);
-      $message->to($to_email)->subject('Сообщение с сайта');
+  \Mail::send('email.mailcontact', $data, function($message1) use ($data)
+  {
+      $mail_admin = env('MAIL_ADMIN_EVENTSOLO');
+      $message1->from($data['name_1'], $data['name_2'], $data['name_3'], $data['name_4'], $data['name_5'], $data['name_6'], $data['name_7'], $data['name_8']);
+      $message1->to($mail_admin, 'For Admin')->subject('Message from site');
    });
 
-   return redirect('/');
+   session()->flash('message', 'Ваша заявка отправлена!');
+     return redirect('/');
   }
 }

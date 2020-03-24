@@ -11,13 +11,13 @@
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-group">
-                      <input type="text" class="form-control" id="name" name="name_footer" placeholder="Ваше имя" required data-error="введите ваше имя">
+                      <input type="text" class="form-control" id="name" name="name_1" placeholder="Ваше имя" required data-error="введите ваше имя">
                       <div class="help-block with-errors"></div>
                     </div>                                 
                   </div>
                   <div class="col-md-6">
                     <div class="form-group">
-                      <input type="text" placeholder="Ваша почта" id="email" class="form-control" name="email_footer" required data-error="введите вашу почту">
+                      <input type="text" placeholder="Ваша почта" id="email" class="form-control" name="name_2" required data-error="введите вашу почту">
                       <div class="help-block with-errors"></div>
                     </div> 
                   </div>
@@ -29,7 +29,7 @@
                   </div> -->
                   <div class="col-md-12">
                     <div class="form-group"> 
-                      <textarea class="form-control" id="message" placeholder="Ваше сообщение" name="textarea_footer" rows="5" data-error="Введите сообщение" required></textarea>
+                      <textarea class="form-control" id="message" placeholder="Ваше сообщение" name="name_3" rows="5" data-error="Введите сообщение" required></textarea>
                       <div class="help-block with-errors"></div>
                     </div>
                     <div class="submit-button">
@@ -58,13 +58,13 @@
                   <div class="contact-icon">
                     <i class="lni-envelope"></i>
                   </div>
-                  <p><a href="#">ns@anoasi.com</a></p>
+                  <p><a href="mailto:ns@anoasi.com">ns@anoasi.com</a></p>
                 </div>
                 <div class="single-contact">
                   <div class="contact-icon">
                     <i class="lni-phone-handset"></i>
                   </div>
-                  <p><a href="#">8915310344</a></p>
+                  <p><a href="tel:89153103447">89153103447</a></p>
                 </div>
               </div>
             </div>
